@@ -1,6 +1,15 @@
+:root {
+  --bg: #000 linear-gradient(#000, #222);
+  --shadow: 0 0 18px blue;
+}
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  color: white;
+}
+
+body {
+  background: var(--bg);
 }
 
 .navigation {
@@ -10,6 +19,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  margin-bottom: 28px;
+  padding: 12px;
 }
 
 .nav-left {
@@ -38,12 +52,15 @@
 
 .nav-left ul li a {
   text-decoration: none;
-  color: black;
 }
 
 .nav-left ul li a:hover {
-  color: var(--main-bg-color);
+  color: orange;
   font-weight: bolder;
+}
+
+input.form-input {
+  background-color: rgba(59, 59, 59, 0.5);
 }
 
 .content {
@@ -55,8 +72,8 @@
 }
 
 .content::after {
-  content: "";
-  background-image: url("../img/11.svg");
+  content: '';
+  background-image: url('../img/11.svg');
   position: absolute;
   width: 100%;
   height: inherit;
@@ -90,28 +107,20 @@
   background-color: rgb(248, 239, 239, 0.5);
   margin-top: 23px;
   position: relative;
-}
-
-.year-box {
-  position: absolute;  
-  right: 0px;
-  top: 100px;
-  width: 234px;
-  height: 255px;
-  font-size: 18px;
-}
-
-.year-box div {
-  margin: 12px 0px;
+  background: var(--bg);
 }
 
 .home-article {
   display: flex;
   margin: 25px;
+  box-shadow: var(--shadow);
+  border-radius: 12px;
 }
 
 .home-article img {
   width: 300px;
+  border-radius: 12px;
+  padding: 8px;
 }
 
 .home-article-content {
